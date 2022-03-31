@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character :iHaveMoves
+public class Character : iHaveMoves
 {
     [SerializeField]
     Sprite image;
@@ -18,7 +18,7 @@ public class Character :iHaveMoves
 
     public List<Moves> CharacterMoves { get; set; }
 
-    public Character(string _name, string instrument, List<Moves> _characterMoves , Transform _CharacterCoasterLocation) 
+    public Character(string _name, string instrument, List<Moves> _characterMoves, Transform _CharacterCoasterLocation)
     {
         Name = _name;
         Instrument = instrument;
@@ -27,7 +27,7 @@ public class Character :iHaveMoves
         coasterTransform = _CharacterCoasterLocation;
     }
 
-    public Character(string _name, string instrument , List<Moves> _characterMoves, OnTurnStart onTurnStart, Transform _CharacterCoasterLocation)
+    public Character(string _name, string instrument, List<Moves> _characterMoves, OnTurnStart onTurnStart, Transform _CharacterCoasterLocation)
     {
         Name = _name;
         Instrument = instrument;

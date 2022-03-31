@@ -10,12 +10,12 @@ public abstract class MiniGame : MonoBehaviour, iActivity
     protected MusicalComponent musicalComponent;
 
     readonly string[] miniGameToasts = { "Cool", "Great", "Rad", "Hype", "Powerful", "Ultimate" };
-    protected string[] MiniGameToasts { get { return miniGameToasts; }  }
+    protected string[] MiniGameToasts { get { return miniGameToasts; } }
 
     protected enum LetterKeys { LEFT, DOWN, RIGHT, UP, COUNT };
 
     public enum MiniGameType { HAMMER, WHIRLED, MEMORY, NONE };
-    public abstract MiniGameType miniGameType {get;}
+    public abstract MiniGameType miniGameType { get; }
     public PlayerController.ActivityControlType controlForActivity { get { return PlayerController.ActivityControlType.MINIGAME; } set { } }
 
     public delegate void onMiniGameEnd(float damage);
@@ -24,7 +24,7 @@ public abstract class MiniGame : MonoBehaviour, iActivity
     protected Vector3 menuStartPosition;
     protected Vector3 menuCurPosition;
     protected Vector3 menuEndPosition;
-    protected Vector3 menuTargetPosition; 
+    protected Vector3 menuTargetPosition;
 
     public int FullDamageValue { get; set; }
     protected int DamageValue;
@@ -47,23 +47,23 @@ public abstract class MiniGame : MonoBehaviour, iActivity
         this.gameObject.SetActive(false);
     }
 
-    public virtual void Down() {}
+    public virtual void Down() { }
 
-    public virtual void Left() {}
+    public virtual void Left() { }
 
-    public virtual void Right () {}
+    public virtual void Right() { }
 
-    public virtual void Up() {}
+    public virtual void Up() { }
 
-    public virtual void UpKeyUp() {}
+    public virtual void UpKeyUp() { }
 
-    public virtual void DownKeyUp() {}
+    public virtual void DownKeyUp() { }
 
-    public virtual void LeftKeyUp() {}
+    public virtual void LeftKeyUp() { }
 
-    public virtual void RightKeyUp() {}
+    public virtual void RightKeyUp() { }
 
-    public void Select(){}
+    public void Select() { }
 
     public virtual void ShowActivity()
     {
@@ -81,8 +81,8 @@ public abstract class MiniGame : MonoBehaviour, iActivity
         TimerManager.Instance.createTimer(0.3f, HideActivity);
     }
 
-    protected void sendToast(string messageToSend, int colorIndex )
+    protected void sendToast(string messageToSend, int colorIndex)
     {
-        ToastPool.Instance.SendToastFromLocation(new Vector3 (menuCurPosition.x + 300f, 0,menuCurPosition.z - 20), messageToSend, colorIndex);
+        ToastPool.Instance.SendToastFromLocation(new Vector3(menuCurPosition.x + 300f, 0, menuCurPosition.z - 20), messageToSend, colorIndex);
     }
 }

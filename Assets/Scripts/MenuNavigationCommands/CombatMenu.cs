@@ -63,7 +63,7 @@ public class CombatMenu : MonoBehaviour, iControllableMenu
 
             if (MenuIndex % ArrowLocations.Length == 2)
             {
-                LabelMenuActions(MenuIndex - (ActionText.Length-1));
+                LabelMenuActions(MenuIndex - (ActionText.Length - 1));
             }
 
             ArrowLocations[MenuIndex % ArrowLocations.Length].enabled = true;
@@ -71,7 +71,7 @@ public class CombatMenu : MonoBehaviour, iControllableMenu
     }
 
     public void Down()
-    {  
+    {
         if (MenuIndex + 1 < CharacterMoves.Count)
         {
             MenuIndex++;
@@ -81,7 +81,7 @@ public class CombatMenu : MonoBehaviour, iControllableMenu
                 image.enabled = false;
             }
 
-            if(MenuIndex % ArrowLocations.Length == 0)
+            if (MenuIndex % ArrowLocations.Length == 0)
             {
                 LabelMenuActions(MenuIndex);
             }
@@ -102,13 +102,13 @@ public class CombatMenu : MonoBehaviour, iControllableMenu
         LabelMenuActions(MenuIndex);
     }
 
-    public void LabelMenuActions(int TopOfPage)  
+    public void LabelMenuActions(int TopOfPage)
     {
-        for(int j = 0; j < ActionText.Length; j++)
+        for (int j = 0; j < ActionText.Length; j++)
         {
             ActionText[j].enabled = false;
         }
-        for(int i = 0; i < ActionText.Length; i++ )
+        for (int i = 0; i < ActionText.Length; i++)
         {
             if (TopOfPage + i == CharacterMoves.Count) { break; }
             ActionText[i].enabled = true;
@@ -150,22 +150,22 @@ public class CombatMenu : MonoBehaviour, iControllableMenu
 
     public void UpKeyUp()
     {
-        
+
     }
 
     public void DownKeyUp()
     {
-       
+
     }
 
     public void LeftKeyUp()
     {
-        
+
     }
 
     public void RightKeyUp()
     {
-        
+
     }
 }
 

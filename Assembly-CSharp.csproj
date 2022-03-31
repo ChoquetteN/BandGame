@@ -100,6 +100,7 @@
     <Compile Include="Assets\SPUM\Script\SPUM_PackageButton.cs" />
     <Compile Include="Assets\SPUM\Sprite_SheetExporter(Beta)\Script\SPUM_Exporter.cs" />
     <Compile Include="Assets\Scripts\MenuNavigationCommands\MenuCommand.cs" />
+    <Compile Include="Assets\Scripts\Mediator\IMediator.cs" />
     <Compile Include="Assets\SPUM\Sample\Script\PlayerObj.cs" />
     <Compile Include="Assets\Scripts\iHaveMoves.cs" />
     <Compile Include="Assets\Scripts\CameraManager\CameraManager.cs" />
@@ -121,12 +122,6 @@
     <Compile Include="Assets\Scripts\MiniGames\Hammer.cs" />
     <Compile Include="Assets\Scripts\MiniGames\MiniGame.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterFactory.cs" />
-    <Compile Include="Assets\Scripts\CharacterFactory.cs" />
-    <Compile Include="Assets\Scripts\CombatMenu.cs" />
-    <Compile Include="Assets\Scripts\MiniGame.cs" />
-    <Compile Include="Assets\Scripts\CharacterTurnManager.cs" />
-    <Compile Include="Assets\Scripts\Mediator\IMediator.cs" />
-    <Compile Include="Assets\Scripts\Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SPUM\ReadMe - 1.6.0.txt" />
